@@ -72,8 +72,8 @@ int main()
 
 		}
 
-		PlayerPosition.X = PlayerPosition.X < 0 ? 0 : PlayerPosition.X;
-		PlayerPosition.Y = PlayerPosition.Y < 0 ? 0 : PlayerPosition.Y;
+		PlayerPosition.X = PlayerPosition.X < 1 ? 1 : PlayerPosition.X;
+		PlayerPosition.Y = PlayerPosition.Y < 1 ? 1 : PlayerPosition.Y;
 		PlayerPosition.X = PlayerPosition.X > 9 ?  9 : PlayerPosition.X;
 		PlayerPosition.Y = PlayerPosition.Y >  9 ?  9 : PlayerPosition.Y;
 
