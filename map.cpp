@@ -7,14 +7,14 @@ void map()
 {
 	char map[11][11] =
 	{ {'#','#','#','#','#','#','#','#','#','#','\n'}
-		 , { '#','0','0','0','0','0','0','0','0','#','\n' }
-		 , {'#', '0', '0', '0', '0', '0', '0', '0', '0', '#','\n' }
-		 , { '#','0','0','0','0','0','0','0','0','#','\n' }
-		 , { '#','0','0','0','0','0','0','0','0','#','\n' }
-		 , { '#','0','0','0','0','0','0','0','0','#' ,'\n'}
-		 , { '#','0','0','0','0','0','0','0','0','#','\n' }
-		 , { '#','0','0','0','0','0','0','0','0','#','\n' }
-		 , { '#','0','0','0','0','0','0','0','0','#','\n' }
+		 , { '#',' ',' ',' ',' ',' ',' ',' ',' ','#','\n' }
+		 , {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#','\n' }
+		 , { '#',' ',' ',' ',' ',' ',' ',' ',' ','#','\n' }
+		 , { '#',' ',' ',' ',' ',' ',' ',' ',' ','#','\n' }
+		 , { '#',' ',' ',' ',' ',' ',' ',' ',' ','#' ,'\n'}
+		 , { '#',' ',' ',' ',' ',' ',' ',' ',' ','#','\n' }
+		 , { '#',' ',' ',' ',' ',' ',' ',' ',' ','#','\n' }
+		 , { '#',' ',' ',' ',' ',' ',' ',' ',' ','#','\n' }
 		 , {'#','#','#','#','#','#','#','#','#','#','\n' }
 	};
 
@@ -41,8 +41,8 @@ int main()
 {
 	bool bRunning = true;
 	FVector2D PlayerPosition;
-	PlayerPosition.X = 0;
-	PlayerPosition.Y = 0;
+	PlayerPosition.X = 1;
+	PlayerPosition.Y = 1;
 	map();
 	while (bRunning)
 	{
@@ -74,8 +74,8 @@ int main()
 
 		PlayerPosition.X = PlayerPosition.X < 0 ? 0 : PlayerPosition.X;
 		PlayerPosition.Y = PlayerPosition.Y < 0 ? 0 : PlayerPosition.Y;
-		PlayerPosition.X = PlayerPosition.X > 10 ? 10 : PlayerPosition.X;
-		PlayerPosition.Y = PlayerPosition.Y > 10 ? 10 : PlayerPosition.Y;
+		PlayerPosition.X = PlayerPosition.X > 9 ?  9 : PlayerPosition.X;
+		PlayerPosition.Y = PlayerPosition.Y >  9 ?  9 : PlayerPosition.Y;
 
 		system("cls");
 		map();
